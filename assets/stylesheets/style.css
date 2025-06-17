@@ -1,0 +1,32 @@
+body {
+    position: relative;
+    font-family: var(--font-body);
+    font-size: 14px;
+    width: 100%;
+    background-color: var(--bg-color-main);
+  }
+
+/** HEADER MENU */
+
+.header {
+    display: none;
+    visibility: hidden;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 40px 60px 20px 40px;
+    opacity: 0;
+    transition: all .5s ease-in;
+    -webkit-transition: all .5s ease-in;
+    -moz-transition: all .5s ease-in;
+    -o-transition: all .5s ease-in;
+    animation: hideMenu .5s linear forwards;
+    -webkit-animation: hideMenu .5s linear forwards;
+    -moz-animation: hideMenu .5s linear forwards;
+    -o-animation: hideMenu .5s linear forwards;
+    background-color: var(--bg-color-main);
+    z-index: 25;
+  }
