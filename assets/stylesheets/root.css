@@ -1,0 +1,24 @@
+:root {
+    --bg-color-main: #000;
+    --intro-text-color: #ffffff;
+    --intro-text-shadow: #ffffff30;
+    --text-color: #ffffff;
+    --text-menu-color: #ffffff30;
+    --text-shadow: #00bbb8;
+    --menu-logo-color: #ffffff;
+    --menu-links-hover: #00bbb8;
+    --contact-links-hover: #00bbb8;
+    --section-title-color: #5c5c5c;
+    --color-light-blue: #00f7c2;
+    --color-light-blue-2: #00ffb9;
+    --color-light-blue-3: #00e6dc;
+    --color-light-blue-4: #0cc;
+    --font-body: 'Roboto';
+    --font-bold: 900;
+    --font-medium: 700;
+    --font-standard: 500;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
