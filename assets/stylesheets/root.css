@@ -1,24 +1,42 @@
+@font-face {
+  font-family: "Comforter";
+  src: url("../fonts/Comforter/Comforter-Regular.ttf");
+  font-style: normal;
+  font-size: normal;
+}
+
+@font-face {
+  font-family: "Ruslan";
+  src: url("../fonts/Ruslan_Display/RuslanDisplay-Regular.ttf");
+  font-style: normal;
+  font-size: normal;
+}
+
 :root {
-    --bg-color-main: #000;
-    --intro-text-color: #ffffff;
-    --intro-text-shadow: #ffffff30;
-    --text-color: #ffffff;
-    --text-menu-color: #ffffff30;
-    --text-shadow: #00bbb8;
-    --menu-logo-color: #ffffff;
-    --menu-links-hover: #00bbb8;
-    --contact-links-hover: #00bbb8;
-    --section-title-color: #5c5c5c;
-    --color-light-blue: #00f7c2;
-    --color-light-blue-2: #00ffb9;
-    --color-light-blue-3: #00e6dc;
-    --color-light-blue-4: #0cc;
-    --font-body: 'Roboto';
-    --font-bold: 900;
-    --font-medium: 700;
-    --font-standard: 500;
-  }
-  
-  html {
-    scroll-behavior: smooth;
-  }
+  --color-gold: #bdae82;
+  --color-black: #000000;
+  --color-white: #ffffff;
+  --color-red: #d71e00;
+  --font-title-section: Ruslan, serif;
+  --font-for-text: Inter, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body.dark-theme {
+  background-color: var(--color-black);
+  overflow-x: hidden;
+}
+body.light-theme {
+  background-color: var(--color-black);
+  overflow-x: hidden;
+}
+
+a {
+  transition: .3s;
+}
+
+
+

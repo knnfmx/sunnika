@@ -5,128 +5,382 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="assets/stylesheets/reset.css">
+	<link rel="stylesheet" href="assets/stylesheets/root.css">
   <link rel="stylesheet" href="assets/stylesheets/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Ruslan+Display&display=swap" rel="stylesheet">
   <title>Sunnika</title>
 </head>
-<body id="body" class="body">
-	<header class="header">
-    <a href="#intro" class="header__menu-logo" title="Перейти к началу...">
-      Sunnika
-    </a>
-    <nav class="header__menu">
-      <ul class="menu__links-list">
-        <li class="menu-title">меню</li>
-        <li class="menu__links-list__item">
-          <a href="#about" class="menu__link about-link">о нас</a>
-        </li>
-        <li class="menu__links-list__item">
-          <a href="#code" class="menu__link code-link">меню</a>
-        </li>
-        <li class="menu__links-list__item">
-          <a href="#projects" class="menu__link projects-link">меню</a>
-        </li>
-        <li class="menu__links-list__item">
-          <a href="#education" class="menu__link education-link">меню</a>
-        </li>
-        <li class="menu__links-list__item">
-          <a href="#footer" class="menu__link footer-link">contacts</a>
-        </li>
-      </ul>
-    </nav>
-    <div class="menu-burger" id="burger">
-      <span class="menu-burger__icon"></span>
-      <span class="menu-burger__text">меню</span>
+<body>
+  <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4SSR6ZR8RS"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-4SSR6ZR8RS');
+    </script>
+  <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MWZ8SV3B');</script>
+  <!-- End Google Tag Manager -->
+  <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MWZ8SV3B"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <!-- Yandex.Metrika counter -->
+    <script type="text/javascript" >
+      (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+      m[i].l=1*new Date();
+      for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+      k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+      (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+      ym(103004325, "init", {
+          clickmap:true,
+          trackLinks:true,
+          accurateTrackBounce:true,
+          webvisor:true
+      });
+      </script>
+    <noscript>
+      <div>
+        <img src="https://mc.yandex.ru/watch/103004325" style="position:absolute; left:-9999px;" alt="" />
+      </div>
+    </noscript>
+    <!-- /Yandex.Metrika counter -->
+	<header>
+    <div class="container header-container theme">
+      <a class="logo" href="https://github.com">
+        Сунника
+      </a>
+      <nav class="menu-wrapper">
+        <ul id="menu" class="menu theme">
+          <li class="menu-items">
+            <a class="menu-items__link theme _lng-skills" href="#skills">О нас</a>
+          </li>
+          <li class="menu-items">
+            <a class="menu-items__link theme _lng-portfolio" href="#portfolio">Меню</a>
+          </li>
+          <li class="menu-items">
+            <a class="menu-items__link theme _lng-video" href="#video">Видео</a>
+          </li>
+          <li class="menu-items">
+            <a class="menu-items__link theme _lng-price" href="#price">Прайс</a>
+          </li>
+          <li class="menu-items">
+            <a class="menu-items__link theme _lng-price" href="#delivery">Доставка</a>
+          </li>
+          <li class="menu-items">
+            <a class="menu-items__link theme _lng-contacts" href="#contacts">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+      <!-- <div class="language-select theme">
+        <a href="#en" class="language theme" id="english">en</a>
+        <span class="language-separator">/</span>
+        <a href="#ru" class="language theme" id="russian">ru</a>
+      </div>
+      <button class="theme-toggle-btn" id="theme-toggle-btn">
+        <svg class="light-theme-icon theme" width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M22.8374 17.2125C23.9499 17.2125 25.0375 17.5424 25.9625 18.1605C26.8875 18.7786 27.6085 19.6571 28.0342 20.6849C28.46 21.7127 28.5714 22.8437 28.3543 23.9349C28.1373 25.026 27.6015 26.0283 26.8149 26.815C26.0282 27.6016 25.0259 28.1374 23.9348 28.3544C22.8436 28.5715 21.7126 28.4601 20.6848 28.0343C19.657 27.6086 18.7785 26.8876 18.1604 25.9626C17.5423 25.0376 17.2124 23.95 17.2124 22.8375C17.2143 21.3462 17.8075 19.9166 18.862 18.8621C19.9165 17.8076 21.3461 17.2144 22.8374 17.2125ZM22.8374 14.4C21.1686 14.4 19.5373 14.8949 18.1498 15.822C16.7622 16.7491 15.6808 18.0669 15.0422 19.6086C14.4036 21.1504 14.2365 22.8469 14.562 24.4836C14.8876 26.1203 15.6912 27.6237 16.8712 28.8037C18.0512 29.9837 19.5546 30.7873 21.1913 31.1129C22.828 31.4384 24.5245 31.2713 26.0663 30.6327C27.608 29.9941 28.9258 28.9127 29.8529 27.5251C30.7801 26.1376 31.2749 24.5063 31.2749 22.8375C31.2749 20.5997 30.386 18.4536 28.8036 16.8713C27.2213 15.2889 25.0752 14.4 22.8374 14.4Z"/>
+          <path d="M7.58521 9.58078L9.57364 7.59094L14.504 12.5212L12.5155 14.5097L7.58521 9.58078Z"/>
+          <path d="M2.8125 21.1008H9.84375V23.9133H2.8125V21.1008Z"/>
+          <path d="M7.58521 35.4333L12.5155 30.503L14.504 32.4928L9.57364 37.4217L7.58521 35.4333Z"/>
+          <path d="M21.0938 35.1633H23.9062V42.1945H21.0938V35.1633Z"/>
+          <path d="M30.4973 32.4928L32.4858 30.503L37.4161 35.4333L35.4276 37.4217L30.4973 32.4928Z"/>
+          <path d="M35.1562 21.1008H42.1875V23.9133H35.1562V21.1008Z"/>
+          <path d="M30.4973 12.5212L35.4276 7.59094L37.4161 9.58078L32.4858 14.5097L30.4973 12.5212Z"/>
+          <path d="M21.0938 2.81953H23.9062V9.85078H21.0938V2.81953Z"/>
+        </svg>
+        <svg class="dark-theme-icon theme" width="41" height="40" viewBox="0 0 41 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M21.4528 40C15.7066 40 10.315 37.8174 6.27098 33.8545C2.22701 29.8915 5.02421e-07 24.6074 5.02421e-07 18.9761C-0.00085731 15.0913 1.09674 11.2823 3.17098 7.97181C5.24521 4.66132 8.21494 1.97886 11.7505 0.222165C12.1143 0.0404498 12.5246 -0.032245 12.9302 0.0131555C13.3359 0.058556 13.7189 0.220041 14.0315 0.477451C14.344 0.734861 14.5723 1.07679 14.6878 1.46057C14.8033 1.84434 14.8009 2.25294 14.6809 2.63538C13.672 5.82896 13.5728 9.23201 14.3941 12.4768C15.2154 15.7216 16.9259 18.6847 19.3408 21.046C21.0739 22.757 23.136 24.1141 25.4078 25.0388C27.6796 25.9635 30.116 26.4374 32.576 26.433C34.4579 26.4345 36.3292 26.1578 38.1269 25.6125C38.5172 25.4948 38.9342 25.4924 39.3258 25.6056C39.7175 25.7188 40.0665 25.9425 40.3291 26.2488C40.5918 26.5552 40.7566 26.9306 40.8029 27.3282C40.8492 27.7257 40.775 28.1279 40.5895 28.4843C38.7969 31.9492 36.0597 34.8596 32.6817 36.8923C29.3036 38.9251 25.4169 40.0008 21.4528 40ZM11.6763 3.31431C8.93463 4.94908 6.66986 7.24958 5.10105 9.99327C3.53225 12.737 2.71252 15.831 2.72115 18.9761C2.72115 29.0982 11.1241 37.3333 21.4528 37.3333C24.6621 37.3418 27.8193 36.5384 30.619 35.001C33.4187 33.4636 35.7662 31.2441 37.4343 28.5573C35.8413 28.9186 34.2113 29.1007 32.5762 29.1C29.7587 29.1053 26.9682 28.5628 24.3661 27.5041C21.764 26.4453 19.4021 24.8913 17.417 22.9319C14.8382 20.4094 12.9578 17.2845 11.9533 13.8522C10.9489 10.4199 10.8536 6.79329 11.6763 3.31481V3.31431Z" />
+        </svg>
+      </button> -->
+      <div id="burger" class="menu-burger theme">
+        <div class="burger-btn theme"></div>
+      </div>
     </div>
   </header>
-	<div class="intro-page" id="intro">
-    <div class="intro-page__socials-container">
-      <a class="github-logo__link" href="https://www.github.com/knnfmx" target="_blank" title="Welcome to my github account">github
-        <svg class="github-logo" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <linearGradient id="github-gradient" gradientTransform="rotate(45)" gradientUnits="userSpaceOnUse">
-              <stop class="github-icon-stop icon-stop" offset="40%" stop-color="white" />
-              <stop class="github-icon-stop icon-stop" offset="100%" stop-color="white" />
-            </linearGradient>
-            <mask id="github-icon-mask" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
-              <path d="M0 0h24v24H0z" fill="none"></path>
-              <path d="M5.883 18.653c-.3-.2-.558-.455-.86-.816a50.32 50.32 0 0 1-.466-.579c-.463-.575-.755-.84-1.057-.949a1 1 0 0 1 .676-1.883c.752.27 1.261.735 1.947 1.588-.094-.117.34.427.433.539.19.227.33.365.44.438.204.137.587.196 1.15.14.023-.382.094-.753.202-1.095C5.38 15.31 3.7 13.396 3.7 9.64c0-1.24.37-2.356 1.058-3.292-.218-.894-.185-1.975.302-3.192a1 1 0 0 1 .63-.582c.081-.024.127-.035.208-.047.803-.123 1.937.17 3.415 1.096A11.731 11.731 0 0 1 12 3.315c.912 0 1.818.104 2.684.308 1.477-.933 2.613-1.226 3.422-1.096.085.013.157.03.218.05a1 1 0 0 1 .616.58c.487 1.216.52 2.297.302 3.19.691.936 1.058 2.045 1.058 3.293 0 3.757-1.674 5.665-4.642 6.392.125.415.19.879.19 1.38a300.492 300.492 0 0 1-.012 2.716 1 1 0 0 1-.019 1.958c-1.139.228-1.983-.532-1.983-1.525l.002-.446.005-.705c.005-.708.007-1.338.007-1.998 0-.697-.183-1.152-.425-1.36-.661-.57-.326-1.655.54-1.752 2.967-.333 4.337-1.482 4.337-4.66 0-.955-.312-1.744-.913-2.404a1 1 0 0 1-.19-1.045c.166-.414.237-.957.096-1.614l-.01.003c-.491.139-1.11.44-1.858.949a1 1 0 0 1-.833.135A9.626 9.626 0 0 0 12 5.315c-.89 0-1.772.119-2.592.35a1 1 0 0 1-.83-.134c-.752-.507-1.374-.807-1.868-.947-.144.653-.073 1.194.092 1.607a1 1 0 0 1-.189 1.045C6.016 7.89 5.7 8.694 5.7 9.64c0 3.172 1.371 4.328 4.322 4.66.865.097 1.201 1.177.544 1.748-.192.168-.429.732-.429 1.364v3.15c0 .986-.835 1.725-1.96 1.528a1 1 0 0 1-.04-1.962v-.99c-.91.061-1.662-.088-2.254-.485z"></path>
-            </mask>
-          </defs>
-          <g mask="url(#github-icon-mask)">
-            <rect x="0" y="0" width="24" height="24" fill="url(#github-gradient)"></rect>
-          </g>
-        </svg>
-      </a>
-      <ul class="socials-list">
-        <li class="socials-list__item">
-          <a class="socials-list__item-link" href="https://www.linkedin.com/in/anton-vasilyuk-283916177/" target="_blank" title="Hey, add me to your contact list, please">linkedin
-            <svg class="socials-list__item-link__icon" baseProfile="tiny" viewBox="0 0 24 24" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
-              <defs>
-                <linearGradient id="linkedin-gradient" gradientTransform="rotate(45)" gradientUnits="userSpaceOnUse">
-                  <stop class="linkedin-icon-stop icon-stop" offset="40%" stop-color="white" />
-                  <stop class="linkedin-icon-stop icon-stop" offset="100%" stop-color="white" />
-                </linearGradient>
-                <mask id="linkedin-icon-mask" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
-                  <path d="M8 19H5V9h3v10zm11 0h-3v-5.342c0-1.392-.496-2.085-1.479-2.085-.779 0-1.273.388-1.521 1.165V19h-3s.04-9 0-10h2.368l.183 2h.062c.615-1 1.598-1.678 2.946-1.678 1.025 0 1.854.285 2.487 1.001.637.717.954 1.679.954 3.03V19z"></path>
-                  <ellipse cx="6.5" cy="6.5" rx="1.55" ry="1.5"></ellipse>
-                </mask>
-              </defs>
-              <g mask="url(#linkedin-icon-mask)">
-                <rect x="0" y="0" width="24" height="24" fill="url(#linkedin-gradient)"></rect>
-              </g>
+	<main>
+    <div class="container">
+      <section class="hero-container theme">
+        <div class="hero-container-content">
+          <h1 class="hero-section-title _lng-hero-title theme">Кафе Сунника</h1>
+          <div class="hero-section-description _lng-hero-text theme">
+						<p class="hero-section-description-mandatory _lng-hero-text theme">Вкус, который говорит сам за себя</p>
+						<p class="hero-section-description-secondary _lng-hero-text theme">Почувствуйте настоящую еду — с дымком, с душой, с характером.</p></div>
+          <button class="button _lng-hire theme">Заказать</button>
+        </div>
+      </section>
+      <section class="section skills-container" id="skills">
+        <h2 class="section-title section-title-lines _lng-skills-section theme">О Нас</h2>
+        <div class="skills-wrapper">
+          <div class="skill-block">
+            <div class="icon-wrapper">
+              <svg class="skill-icon" height="62" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 viewBox="0 0 486.203 486.203" xml:space="preserve">
+								<g>
+									<path d="M412.487,22.161C407.6,5.728,390.271-3.562,373.88,1.293c-4.954,1.482-9.219,4.13-12.669,7.503
+										C355.58,3.355,347.918,0,339.468,0c-9.472,0-17.955,4.214-23.695,10.862C310.033,4.214,301.55,0,292.077,0
+										c-9.472,0-17.955,4.214-23.695,10.862C262.643,4.214,254.16,0,244.687,0c-9.473,0-17.956,4.214-23.695,10.862
+										C215.253,4.214,206.77,0,197.297,0c-9.473,0-17.956,4.214-23.695,10.862C167.863,4.214,159.379,0,149.907,0
+										c-9.276,0-17.606,4.039-23.337,10.449c-3.697-4.162-8.503-7.439-14.246-9.156C95.932-3.57,78.62,5.72,73.717,22.161L31.459,163.586
+										h423.285L412.487,22.161z"/>
+									<path d="M48.011,216.593c2.967,0.881,5.959,1.302,8.901,1.302c13.362,0,25.708-8.688,29.729-22.168l1.626-5.45
+										c1.104,9.893,6.886,18.708,15.52,23.587c2.768,1.563,5.807,2.769,9.116,3.427c2.047,0.406,4.086,0.604,6.093,0.604
+										c14.504,0,27.467-10.219,30.404-24.978l0.762-3.793c0.762,10.521,6.864,19.725,15.797,24.747c3.601,2.023,7.616,3.436,11.995,3.864
+										c1.048,0.102,2.088,0.151,3.11,0.151c15.758,0,29.261-11.941,30.857-27.952l0.221-2.301c0.286,11.298,6.657,20.992,15.885,26.182
+										c4.475,2.523,9.576,4.07,15.082,4.07c5.491,0,10.593-1.547,15.066-4.062c9.228-5.198,15.599-14.893,15.885-26.19l0.223,2.301
+										c1.594,16.01,15.099,27.952,30.855,27.952c1.024,0,2.062-0.048,3.11-0.151c4.379-0.429,8.394-1.841,11.997-3.872
+										c8.934-5.015,15.035-14.218,15.796-24.739l0.762,3.793c2.936,14.766,15.9,24.978,30.412,24.978c1.999,0,4.038-0.198,6.085-0.604
+										c3.309-0.658,6.355-1.864,9.124-3.427c8.633-4.888,14.41-13.695,15.511-23.587l1.626,5.45c4.023,13.48,16.376,22.168,29.729,22.168
+										c2.944,0,5.934-0.421,8.903-1.302c16.043-4.8,25.222-21.423,21.072-37.496H26.945C22.787,195.17,31.968,211.794,48.011,216.593z"/>
+									<path d="M475.856,375.482l-13.575-12.933l-13.576,12.933v29h-19.398V241.173h-0.008c-11.314,0-22.025-3.69-30.943-9.919
+										c-5.983,4.222-12.886,7.348-20.518,8.871c-3.499,0.699-7.077,1.048-10.624,1.048c-2.348,0-4.626-0.311-6.902-0.611v122.011
+										c5.728,8.505,9.6,17.661,10.901,27.134c1.555,11.196-0.785,20.931-6.958,28.943c-13.647,17.733-41.582,21.137-76.968,25.43
+										c-6.729,0.817-13.727,1.674-20.908,2.659c-7.195,0.991-14.193,2.07-20.922,3.11c-18.176,2.8-33.878,5.219-47.581,5.219
+										c-30.8,0-42.463-14.202-46.477-28.34h-8.069c-9.124,0-16.376-7.077-17.146-15.996c3.785-0.262,7.418-1.428,10.426-3.697
+										c3.839,1.943,8.339,3.055,13.043,3.705c2.072,0.294,4.095,0.707,6.285,0.707c1.451,0,4.355-0.008,9.68-1.222
+										c-0.151,2.665-0.151,5.301,0.182,7.808c2.238,16.146,14.083,21.072,32.077,21.072c17.408,0,40.584-4.625,66.329-8.164
+										c52.327-7.213,95.598-7.268,91.203-39.051c-2.221-16.171-16.002-33.142-35.663-45.178c0.239,17.868-6.173,36.434-6.173,36.434
+										c1.183-24.293-10.965-40.226-18.201-47.549c-9.798-3.03-20.264-4.902-31.125-4.902c-1.761,0-3.563,0.262-5.332,0.356
+										c8.838,26.492,4.577,61.022,4.577,61.022c-3.206-19.367-11.615-33.736-20.525-44.09c0.595-1.88,0.96-3.856,0.96-5.896
+										c0-4.522-1.579-8.774-4.301-12.138c4.062-1.104,9.553-3.025,16.512-6.007c0.468-0.198,0.801-0.301,1.285-0.515
+										c3.983-1.706,6.989-4.855,8.901-8.617c1.301-2.538,2.174-5.339,2.174-8.331c0-5.364-2.317-10.354-6.182-13.781
+										c0.057-0.056,0.112-0.121,0.168-0.176c2.022-2.023,8.243-8.219,17.455-31.632c2.793-7.166,1.107-15.262-4.308-20.677
+										c-10.183-10.183-29.413-0.699-32.856,0.919c-13.441,6.308-17.859,10.624-19.478,12.258c-0.041,0.049-0.088,0.08-0.135,0.127
+										c-3.443-3.601-8.245-5.736-13.401-5.736c-7.387,0-14.044,4.373-16.964,11.141c-3.292,7.585-5.276,13.289-6.465,17.653
+										c-3.429-2.967-7.879-4.689-12.6-4.689c-7.704,0-14.647,4.555-17.702,11.631c-9.988,23.002-9.988,31.793-9.988,34.672
+										c0,0.454,0,0.905,0.015,1.357c-3.562-3.752-8.584-5.989-13.987-5.989c-2.158,0.008-4.222,0.452-6.181,1.118v-74.112
+										c-2.276,0.3-4.553,0.611-6.902,0.611c-3.523,0-7.101-0.349-10.647-1.048c-7.626-1.522-14.52-4.641-20.503-8.862
+										c-8.918,6.22-19.621,9.91-30.935,9.91h-0.008v163.308H37.497v-29l-13.568-12.933l-13.583,12.933c0,0,0,94.638,0,95.202
+										c0,8.568,6.95,15.52,15.52,15.52h434.472c8.568,0,15.518-6.951,15.518-15.52C475.856,470.12,475.856,375.482,475.856,375.482z
+										M56.895,455.172H37.497v-28.444h19.398V455.172z M199.963,375.077c-0.983-1.929-2.126-3.809-3.713-5.309
+										c0.452,0.016,0.905,0.016,1.349,0.016c1.643,0,5.245-0.071,12.035-1.841c6.285,14.933,8.182,31.015,8.182,31.015
+										C213.229,388.136,206.637,380.584,199.963,375.077z M122.026,394.262c-1.585-1.571-1.578-4.095-0.015-5.666l9.044-9.06
+										c-6.228-0.912-11.155-9.22-11.155-19.676c0-7.181,5.125-20.248,8.727-28.524c0.587-1.381,1.952-2.254,3.443-2.262
+										c1.5,0,2.857,0.881,3.443,2.262c3.61,8.267,8.76,21.335,8.768,28.524c0,2.618-0.358,5.078-0.905,7.354l29.325-29.324
+										c-6.22-0.897-11.147-9.227-11.147-19.701c0-7.189,5.133-20.248,8.719-28.523c0.603-1.372,1.959-2.269,3.459-2.269
+										c1.492,0,2.849,0.889,3.443,2.262c3.617,8.282,8.758,21.342,8.766,28.53c0,2.619-0.356,5.07-0.903,7.371l22.747-22.755
+										c-4.332-1.539-7.648-7.6-7.648-15.201c0.008-5.664,4.062-15.987,6.902-22.524c0.46-1.087,1.531-1.794,2.722-1.794
+										c1.182,0,2.244,0.699,2.729,1.786c2.848,6.545,6.919,16.86,6.919,22.533c0,1.453-0.286,2.753-0.5,4.079l8.085-8.078
+										c-1.602-5.292,0.991-12.972,7.299-19.263c5.07-5.102,17.924-10.703,26.319-14.012c0.452-0.167,0.919-0.255,1.388-0.255
+										c0.968,0,1.935,0.382,2.658,1.104c1.055,1.054,1.379,2.634,0.84,4.029c-3.308,8.402-8.901,21.272-13.987,26.342
+										c-5.117,5.118-11.188,7.871-16.114,7.871c-0.914,0-1.778-0.095-2.587-0.286l-8.219,8.212c1.324-0.214,2.618-0.492,4.069-0.492
+										c5.682,0,15.987,4.063,22.542,6.911c1.079,0.468,1.776,1.54,1.776,2.713c0,1.191-0.69,2.262-1.776,2.73
+										c-6.546,2.864-16.86,6.927-22.542,6.927c-7.592,0-13.638-3.325-15.193-7.649l-22.183,22.183c2.023-0.429,4.085-0.787,6.338-0.787
+										c7.189,0,20.256,5.149,28.53,8.744c1.373,0.603,2.262,1.968,2.262,3.459c0,1.5-0.889,2.857-2.262,3.443
+										c-8.274,3.603-21.341,8.735-28.53,8.735h-0.024c-10.076,0-18.027-4.594-19.447-10.473l-28.538,28.54
+										c2.023-0.412,4.095-0.778,6.347-0.778c7.189,0,20.24,5.141,28.516,8.744c1.373,0.603,2.262,1.959,2.254,3.459
+										c0,1.5-0.881,2.848-2.254,3.443c-8.275,3.602-21.319,8.727-28.516,8.735h-0.023c-10.053,0-18.018-4.602-19.447-10.489l-8.815,8.821
+										c-0.77,0.787-1.794,1.167-2.816,1.167C123.837,395.436,122.804,395.047,122.026,394.262z M448.705,455.172h-19.398v-28.444h19.398
+										V455.172z"/>
+								</g>
+								</svg>
+            </div>
+            <p class="skill-name _lng-skill-title-1 theme">Свежая выпечка</p>
+            <p class="skill-description _lng-skill-text-1 theme">У нас всегда ароматно и тепло — потому что мы печём сами, каждый день. Хрустящие круассаны, мягкие булочки и пышные пироги — только из свежих ингредиентов и с любовью к деталям. Заходи на запах!</p>
+          </div>
+          <div class="skill-block">
+            <div class="icon-wrapper">
+              <svg class="skill-icon" height="62" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 viewBox="0 0 51.821 51.821" xml:space="preserve">
+								<g>
+									<path d="M49.584,14.099C47.017,7.776,42.018,0.24,32.78,0.24c-2.897,0-6.049,0.767-9.368,2.278
+										c-6.982,3.183-9.266,8.888-6.428,16.065c0.828,2.095,0.595,4.338-0.641,6.154c-1.392,2.047-3.848,3.137-6.359,2.803
+										c-3.961-0.527-7.021,0.469-8.669,2.787c-1.647,2.318-1.756,5.739-0.274,9.982c0.137,0.299,3.463,7.35,11.999,10.172
+										c1.844,0.61,3.754,0.779,5.601,0.942l0.292,0.026c0.973,0.087,2.013,0.131,3.091,0.131c5.685,0,24.58-1.433,29.035-19.868
+										C52.445,25.98,51.935,19.888,49.584,14.099z M49.115,31.243c-4.112,17.017-21.776,18.339-27.092,18.339
+										c-1.019,0-1.999-0.041-2.913-0.123l-0.293-0.026c-1.813-0.16-3.525-0.312-5.149-0.849C6,46.047,2.899,39.564,2.893,39.564
+										c-1.223-3.517-1.205-6.31,0.053-8.077c1.224-1.723,3.414-2.084,5.036-2.084c0.549,0,1.135,0.041,1.74,0.12
+										c3.262,0.435,6.462-0.994,8.274-3.66c1.614-2.373,1.923-5.295,0.847-8.015c-2.456-6.213-0.64-10.758,5.398-13.51
+										C27.297,2.946,30.17,2.24,32.78,2.24c8.126,0,12.615,6.858,14.951,12.611C49.923,20.251,50.402,25.918,49.115,31.243z"/>
+									<path d="M32.746,27.751c-0.05,0.026-0.102,0.048-0.154,0.064c-7.982,2.581-11.543-2.062-12.082-2.855l-0.355-0.392
+										c-0.253,0.651-0.575,1.283-0.982,1.881c-0.681,1.001-1.548,1.835-2.534,2.487c0.983,1.643,2.776,4.009,5.403,5.029
+										c2.12,0.823,4.466,0.632,6.977-0.573c11.578-5.554,17.102-2.646,17.332-2.52l0.682,0.451c0.05-0.187,0.097-0.368,0.139-0.54
+										c0.333-1.379,0.523-2.784,0.6-4.202l-1.647-1.5C44.098,22.985,36.85,25.613,32.746,27.751z"/>
+									<path d="M24.738,6.15c-1.938,0.884-7.834,3.572-4.645,11.638c0.576,1.457,0.781,2.967,0.631,4.433l1.316,1.45
+										c0.047,0.052,0.088,0.107,0.123,0.167c0.104,0.174,2.712,4.335,9.734,2.1c1.54-0.794,12.038-6.002,15.619-2.289l0.242,0.221
+										c-0.164-2.739-0.779-5.496-1.869-8.184C41.547,4.995,34.417,1.743,24.738,6.15z M33.451,18.781c-2.757,0-5-2.243-5-5s2.243-5,5-5
+										s5,2.243,5,5S36.208,18.781,33.451,18.781z"/>
+									<path d="M29.883,35.195c-3.033,1.455-5.918,1.666-8.578,0.63c-1.183-0.461-2.215-1.13-3.104-1.887
+										c0.688,2.33,2.153,4.379,4.159,5.763c1.784,1.231,5.106,3.522,4.252,6.984l-0.143,0.678c12.978-1.379,18.003-8.949,19.924-14.068
+										l-1.079-0.713C45.303,32.584,40.372,30.167,29.883,35.195z"/>
+									<path d="M21.225,41.347c-2.875-1.984-4.817-5.117-5.327-8.595c-0.078-0.535-0.565-1.722-1.088-2.871
+										c-1.049,0.397-2.178,0.609-3.339,0.609c-0.411,0-0.827-0.027-1.234-0.081c-2.635-0.352-4.612,0.171-5.524,1.456
+										c-0.967,1.361-0.958,3.718,0.026,6.635l0.058,0.137c0.499,0.974,3.312,5.938,9.688,8.047c1.449,0.479,3.032,0.619,4.706,0.767
+										l0.283,0.025c0.848,0.076,1.758,0.114,2.706,0.114c0.763,0,1.495-0.026,2.213-0.063l0.272-1.288
+										C25.106,44.446,23.608,42.991,21.225,41.347z"/>
+								</g>
+							</svg>
+            </div>
+            <p class="skill-name _lng-skill-title-2 theme">Сочное мясо</p>
+            <p class="skill-description _lng-skill-text-2 theme">Мы готовим мясо так, как его любят настоящие гурманы: с огнём, ароматом и уважением к каждому куску. Стейки, бургеры, шаверма — всё на высшем уровне, из свежих продуктов и с правильной прожаркой. Без лишнего — только вкус.</p>
+          </div>
+          <div class="skill-block">
+            <div class="icon-wrapper">
+              <svg class="skill-icon" width="62" viewBox="0 -20.55 122.88 122.88" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  style="enable-background:new 0 0 122.88 81.77" xml:space="preserve">
+								<g>
+								<path class="st0" d="M18,33.84c3.46-2.36,5.2-5.45,4.9-12.52V3.14c-0.03-2.54-4.64-2.85-4.87,0l-0.18,14.75 c-0.01,2.76-4.16,2.85-4.15,0l0.18-15.25c-0.05-2.73-4.45-3-4.51,0c0,4.23-0.18,11.02-0.18,15.25c0.22,2.67-3.63,3.02-3.53,0 L5.85,2.73c-0.1-2.06-2.36-2.79-3.9-1.83C0.31,1.95,0.64,4.05,0.57,5.82L0,23.22c0.09,5.06,1.42,9.17,5.38,10.92 c0.6,0.26,1.44,0.47,2.41,0.62L6.42,77.18c-0.08,2.52,1.98,4.57,4.39,4.57h0.55c2.72,0,5.01-2.32,4.94-5.15l-1.2-41.86 C16.36,34.54,17.41,34.25,18,33.84L18,33.84L18,33.84z M113.36,44.66h1.48c0,10.83-0.04,23.34-0.39,34.12 c-0.15,4.13,7.59,3.97,7.45-0.43l-0.29-33.69h1.27V0C106.9,2.45,112.41,33.39,113.36,44.66L113.36,44.66z M105.56,41.11 c0,10.91-3.84,20.22-11.52,27.91c-7.7,7.7-17,11.55-27.91,11.55c-10.86,0-20.17-3.84-27.88-11.55c-7.7-7.69-11.57-17-11.57-27.91 c0-10.88,3.86-20.15,11.57-27.86c7.73-7.7,17.02-11.57,27.88-11.57c10.91,0,20.21,3.86,27.91,11.57 C101.71,20.95,105.56,30.23,105.56,41.11L105.56,41.11z M89.09,41.07c0,6.36-2.23,11.78-6.73,16.28 c-4.48,4.48-9.91,6.73-16.26,6.73c-6.31,0-11.73-2.25-16.22-6.73c-4.49-4.5-6.73-9.92-6.73-16.28c0-6.31,2.24-11.73,6.73-16.21 c4.5-4.48,9.91-6.73,16.22-6.73C78.86,18.15,89.09,28.29,89.09,41.07L89.09,41.07z M86.19,21.06c-5.53-5.53-12.23-8.28-20.09-8.28 c-7.84,0-14.52,2.75-20.01,8.28c-5.53,5.53-8.31,12.21-8.31,20.01c0,7.83,2.78,14.5,8.31,20.06c5.5,5.54,12.17,8.32,20.01,8.32 c7.85,0,14.55-2.78,20.09-8.32c5.51-5.55,8.28-12.23,8.28-20.06C94.47,33.26,91.71,26.59,86.19,21.06L86.19,21.06z"/>
+								</g>
+							</svg>
+            </div>
+            <p class="skill-name _lng-skill-title-3 theme">Обеденное меню</p>
+            <p class="skill-description _lng-skill-text-3 theme">Каждый день — как домашний. Готовим сытные, свежие и по-настоящему вкусные обеды, чтобы ты не тратил время на готовку и не шел на компромиссы со вкусом. Всё по-честному: мясо, гарниры, салаты — как надо!</p>
+          </div>
+          <div class="skill-block">
+            <div class="icon-wrapper">
+              <svg class="skill-icon" width="62" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M267.2 25.08l-70 70.16c-7.7 7.66-7.3 16.86-2.4 26.96l2 4.3-3.1 2.9-23.6 22.3 21.7 21.6 22.2-23.7 2.9-3 4.2 1.9c10.7 5.3 20.6 5.7 27.7-1.4L319 76.85l-10.2-10.18-45.7 45.63-9.6-9.8L299 56.97l-10.9-11.03-45.5 45.7-9.7-9.7 45.5-45.69zM28.97 27.84c-5.73 9.12-6.61 20.83-3.32 34.58 3.87 16.32 13.68 35.22 27.41 53.08 27.35 35.8 50.04 48.1 86.84 54.8l2.4.4c13.6 16.1 27.2 32.1 40.8 48.2h37.1zM137 183.2l-37.74 35.7h49.64l9.7-10.3zM26.25 232.9v63.5l16.51-49.5H279.8l16.5 49.5v-63.5zm29.49 32l-10 30h45.04l10.02-30zm63.96 0l-10 30h42.6v-30zm50.6 0v30h42.6l-10-30zm51.4 0l10 30h45.1l-10-30zm92.6 1.8v188.2h79c4.2-18.2 20.6-32 40-32s35.8 13.8 40 32h15v-64l-56.2-14H328.3v-82H390l-6.9-15zM26.25 312.9v114.2l42.17 27.8h14.85c4.14-18.2 20.53-32 40.03-32 19.4 0 35.8 13.8 40 32h133v-142h-14v80H40.25v-80zm320.05 0v46h72.4l-23-46zm-281.05 19l16 16h16l16.05-16zm-8 27v18H265.3v-18zm66.05 82c-12.9 0-23.1 10.2-23.1 23s10.2 23 23.1 23c12.8 0 23-10.2 23-23s-10.2-23-23-23zm310 0c-12.8 0-23 10.2-23 23s10.2 23 23 23 23-10.2 23-23-10.2-23-23-23z"/>
+							</svg>
+            </div>
+            <p class="skill-name _lng-skill-title-4 theme">Выездная торговля</p>
+            <p class="skill-description _lng-skill-text-4 theme">Мы — не просто кафе, мы — кухня на колёсах. Организуем выездную торговлю и готовим прямо на месте: на фестивалях, вечеринках, корпоративах и любых мероприятиях. Горячее мясо, свежая выпечка, ароматная еда — всё, как вы любите, только ближе.</p>
+          </div>
+        </div>
+      </section>
+      <section class="section portfolio-container" id="portfolio">
+        <h2 class="section-title section-title-lines _lng-portfolio theme">Меню</h2>
+        <div class="portfolio-buttons-wrapper">
+          <button class="select-season-btn _lng-winter theme" data-season="bakery">Выпечка</button>
+          <button class="select-season-btn _lng-spring theme" data-season="spring">Мясо</button>
+          <button class="select-season-btn _lng-summer theme" data-season="summer">Обеды</button>
+          <button class="select-season-btn _lng-autumn theme" data-season="autumn">Пиццы</button>
+        </div>
+        <div class="portfolio-photos-wrapper">
+          <img class="portfolio-photo" src="assets/img/portfolio/winter/1.jpg" alt="portfolio-photo">
+          <img class="portfolio-photo" src="assets/img/portfolio/winter/2.jpg" alt="portfolio-photo">
+          <img class="portfolio-photo" src="assets/img/portfolio/winter/3.jpg" alt="portfolio-photo">
+          <img class="portfolio-photo" src="assets/img/portfolio/winter/4.jpg" alt="portfolio-photo">
+          <img class="portfolio-photo" src="assets/img/portfolio/winter/5.jpg" alt="portfolio-photo">
+          <img class="portfolio-photo" src="assets/img/portfolio/winter/6.jpg" alt="portfolio-photo">
+        </div>
+      </section>
+      <section class="section video-container" id="video">
+        <h2 class="section-title section-title-lines _lng-video theme">Видео</h2>
+        <div class="player-wrapper">
+          <button class="play-btn">
+            <svg class="play-btn-icon theme" viewBox="0 0 130 130" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M58.521 0.13572C58.0219 0.256183 55.5699 0.686409 53.0729 1.09112C6.17415 8.69809 -16.0083 65.9044 13.0263 104.367C22.0681 116.344 42.8323 129.906 43.8607 124.506C43.9895 123.832 42.7534 122.978 39.6854 121.624C27.0991 116.065 15.7097 105.112 9.49548 92.5938C-13.0744 47.1276 25.5402 -4.32319 75.965 4.02852C83.5399 5.28359 84.8555 2.66782 77.4319 1.11129C74.053 0.402757 60.344 -0.303999 58.521 0.136315V0.13572ZM58.8236 13.5427C49.9562 14.8494 38.5455 19.3896 38.5455 21.6114C38.5455 23.3352 39.8261 23.2017 44.5063 20.9901C70.1424 8.8779 101.354 22.1306 110.64 49.0716C126.075 93.8524 75.1194 131.76 36.427 104.279C14.9264 89.009 9.96843 58.679 25.4031 36.8396C29.4989 31.0443 27.3436 28.5941 23.1612 34.2915C-2.60779 69.3966 24.2964 118.982 67.7711 116.507C111.658 114.008 132.641 61.4206 102.441 29.6195C91.3694 17.9613 73.5089 11.378 58.8242 13.5415L58.8236 13.5427ZM111.588 21.4488C110.688 22.349 111.376 23.9601 114.257 27.704C135.62 55.4579 128.626 96.9429 99.2939 116.46C86.0768 125.255 74.472 127.692 52.7708 126.233C50.7271 126.096 50.3491 126.252 50.3491 127.237C50.3491 131.711 76.324 130.498 89.2029 125.422C126.968 110.539 141.858 62.4946 119.094 28.9739C114.774 22.6137 112.602 20.4352 111.588 21.4494L111.588 21.4488ZM47.2645 44.1107C46.191 45.2963 46.099 46.6867 45.9347 64.2031C45.6647 92.9997 42.7985 92.1292 77.569 73.8111C94.5145 64.8831 94.6095 65.1632 70.3056 52.4143C51.3039 42.4467 49.3949 41.7584 47.2645 44.1107ZM68.2637 55.0052C86.726 64.6481 86.8221 64.7081 85.5308 65.7798C84.0829 66.982 51.1615 84 50.285 84C49.5812 84 49.4412 80.8353 49.4412 64.9324C49.4412 51.5574 49.6388 45.8642 50.1022 45.8642C50.4654 45.8642 58.6385 49.9778 68.2643 55.0052H68.2637Z"/>
+            </svg>
+          </button>
+        </div>
+      </section>
+      <section class="section map-section">
+        <h2 class="section-title section-title-lines _lng-map theme">Мы на карте</h2>
+        <div class="map">
+          <div class="map-link__wrapper">
+            <a class="map-link" href="https://yandex.by/maps/101627/fanipol/category/cafe/184106390/?utm_medium=mapframe&utm_source=maps">Cafe in Fanipol</a>
+            <a class="map-link" href="https://yandex.by/maps/org/sunnika/87867559727/?utm_medium=mapframe&utm_source=maps">Сунника</a>
+          </div>
+          <iframe class="map-frame" src="https://yandex.by/map-widget/v1/?ll=27.326310%2C53.742608&mode=search&oid=87867559727&ol=biz&z=16.44" frameborder="1" allowfullscreen="true"></iframe>
+        </div>
+      </section>
+      <!-- <section class="section price-container" id="price">
+        <h2 class="section-title section-title-lines _lng-price theme">Прайс</h2>
+        <div class="price-wrapper">
+          <div class="price__offer">
+            <h3 class="section-title offer-name _lng-offer-standart theme">Стандарт</h3>
+            <p class="offer-cost theme">500 &#36;</p>
+            <p class="offer-description theme">
+              <span class="offer-description-row _lng-price-description-1-span-1">One location</span>
+              <span class="offer-description-row _lng-price-description-1-span-2">120 photos in color</span>
+              <span class="offer-description-row _lng-price-description-1-span-3">12 photos in retouch</span>
+              <span class="offer-description-row _lng-price-description-1-span-4">Readiness 2-3 weeks</span>
+              <span class="offer-description-row _lng-price-description-1-span-5">Make up, visage</span>
+            </p>
+            <button class="offer-submit-btn button _lng-order theme">Позвонить</button>
+          </div>
+          <div class="price__offer">
+            <h3 class="section-title offer-name _lng-offer-premium theme">Премиум</h3>
+            <p class="offer-cost theme">700 &#36;</p>
+            <p class="offer-description theme">
+              <span class="offer-description-row _lng-price-description-2-span-1">One or two locations</span>
+              <span class="offer-description-row _lng-price-description-2-span-2">200 photos in color</span>
+              <span class="offer-description-row _lng-price-description-2-span-3">20 photos in retouch</span>
+              <span class="offer-description-row _lng-price-description-2-span-4">Readiness 1-2 weeks</span>
+              <span class="offer-description-row _lng-price-description-2-span-5">Make up, visage</span>
+            </p>
+            <button class="offer-submit-btn button _lng-order theme">Позвонить</button>
+          </div>
+          <div class="price__offer">
+            <h3 class="section-title offer-name _lng-offer-gold theme">Золотой</h3>
+            <p class="offer-cost theme">1000 &#36;</p>
+            <p class="offer-description theme">
+              <span class="offer-description-row _lng-price-description-3-span-1">Three locations or more</span>
+              <span class="offer-description-row _lng-price-description-3-span-2">300 photos in color</span>
+              <span class="offer-description-row _lng-price-description-3-span-3">50 photos in retouch</span>
+              <span class="offer-description-row _lng-price-description-3-span-4">Readiness 1 week</span>
+              <span class="offer-description-row _lng-price-description-3-span-5">Make up, visage, hairstyle</span>
+            </p>
+            <button class="offer-submit-btn button _lng-order theme">Позвонить</button>
+          </div>
+        </div>
+      </section> -->
+      <section class="section contacts-container theme" id="contacts">
+				<div class="delivery-info">
+					<h2 class="section-title delivery-info-title _lng-delivery-info theme">Условия доставки</h2>
+					<div class="delivery-info-description-wrapper">
+						<p class="delivery-info-description">г.Фаниполь: 5р (Бесплатная доставка от 25р)</p>
+						<p class="delivery-info-description">в 10км вокруг Фаниполя действует тариф по г.Фаниполь</p>
+						<p class="delivery-info-description">г.Дзержинск: 10р(Бесплатная доставка от 45р)</p>
+						<p class="delivery-info-description">г.Минск: 10р(Бесплатная доставка от 45р)</p>
+					</div>
+				</div>
+        <div class="contacts-form-wrapper">
+          <h2 class="section-title contacts-title _lng-contact-me theme">Оформить заказ
+            <span class="section-title-lowercase theme"></span>
+          </h2>
+          <form id="contact-form" action="mailto:photographer@gmail.com">
+            <input class="contact-form-input theme" type="email" placeholder="Почта" required>
+            <input class="contact-form-input theme" type="tel" placeholder="Телефон" required>
+            <textarea class="textarea theme" name="message" id="contact-form-textarea" placeholder="Сообщение" required></textarea>
+          </form>
+          <button class="button contacts-btn _lng-send-message theme">Отправить</button>
+        </div>
+      </section>
+    </div>
+  </main>
+  <footer>
+    <div class="container footer-container theme">
+      <p class="footer-text-row theme">
+        ООО "МаГорТоргСтрой"
+      </p>
+      <p class="footer-text-row theme">
+        УНП 691652315
+      </p>
+      <p class="footer-text-row theme">
+        г.Фаниполь, ул.Якуба Колоса 1в.
+      </p>
+      <p class="footer-text-row">
+        <a class="footer-link theme" href="tel:+375259538962" target="_blank">+375259538962</a>
+      </p>
+      <ul class="footer-socials-list">
+        <li class="social-list-item">
+          <a href="https://www.instagram.com/kafe_sunnika_fanipol_">
+            <svg class="social-icon theme" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M15.36 0.666992C17.76 0.666992 18.267 0.693992 19.493 0.746992C20.906 0.813992 21.88 1.03999 22.72 1.37399C23.6 1.70699 24.347 2.17399 25.08 2.90699C25.827 3.63999 26.28 4.38699 26.627 5.26699C26.96 6.10699 27.174 7.07999 27.24 8.50699C27.307 9.77399 27.32 10.267 27.32 12.934V15.067C27.32 17.734 27.307 18.227 27.24 19.494C27.217 20.659 26.994 21.764 26.604 22.788L26.626 22.721C26.279 23.601 25.826 24.348 25.093 25.081C24.346 25.828 23.6 26.281 22.72 26.628C21.88 26.961 20.907 27.175 19.493 27.241C18.226 27.308 17.72 27.321 15.053 27.321H12.933C10.266 27.321 9.77296 27.308 8.49296 27.241C7.32796 27.218 6.22296 26.995 5.19896 26.605L5.26596 26.627C4.34296 26.274 3.55596 25.753 2.90696 25.094L2.90596 25.093C2.23996 24.441 1.71396 23.649 1.37396 22.764L1.35896 22.719C0.991964 21.763 0.768964 20.657 0.745964 19.502V19.492C0.692964 18.45 0.662964 17.229 0.662964 16.002C0.662964 15.776 0.663964 15.55 0.665964 15.325V15.359V12.626C0.665964 10.226 0.692964 9.71899 0.745964 8.49299C0.812964 7.07999 1.03896 6.10599 1.35896 5.26599C1.70596 4.38599 2.15896 3.63899 2.90596 2.90599C3.55096 2.23899 4.33996 1.71599 5.22296 1.38699L5.26596 1.37299C6.22096 1.00199 7.32596 0.773992 8.48096 0.746992H8.49296C9.71996 0.693992 10.226 0.666992 12.626 0.666992H15.36ZM15.387 3.06699H12.6C10.293 3.06699 9.79996 3.09399 8.59996 3.14699C7.30696 3.19999 6.59996 3.41399 6.13296 3.59999C5.50596 3.83999 5.06596 4.13299 4.59996 4.59999C4.13396 5.06699 3.83996 5.50699 3.59996 6.13299C3.42696 6.59999 3.19996 7.30599 3.14696 8.61299C3.09396 9.81299 3.06696 10.293 3.06696 12.613V15.386C3.06696 17.706 3.09396 18.186 3.14696 19.386C3.19996 20.679 3.41396 21.386 3.59996 21.853C3.83996 22.48 4.13296 22.92 4.59996 23.386C5.06696 23.852 5.50696 24.146 6.13296 24.386C6.59996 24.573 7.30596 24.786 8.61296 24.839C9.90596 24.906 10.373 24.919 13.253 24.919H14.733C17.626 24.919 18.08 24.906 19.386 24.839C20.679 24.786 21.386 24.572 21.853 24.386C22.48 24.146 22.92 23.853 23.386 23.386C23.852 22.919 24.146 22.479 24.386 21.853C24.573 21.386 24.786 20.68 24.839 19.386C24.906 18.079 24.919 17.626 24.919 14.733V13.266C24.919 10.373 24.906 9.90599 24.839 8.59899C24.786 7.30599 24.572 6.59899 24.386 6.13199C24.16 5.53099 23.819 5.01799 23.387 4.59999L23.386 4.59899C22.966 4.16599 22.454 3.82499 21.881 3.60799L21.853 3.59899C21.121 3.32299 20.275 3.15799 19.391 3.14599H19.386C18.358 3.09399 17.155 3.06399 15.944 3.06399C15.748 3.06399 15.552 3.06499 15.356 3.06599H15.386L15.387 3.06699ZM14 7.14699C17.781 7.14699 20.847 10.212 20.847 13.994C20.847 17.776 17.782 20.841 14 20.841C10.219 20.841 7.15296 17.776 7.15296 13.994C7.15296 10.212 10.218 7.14699 14 7.14699ZM14 9.54699C11.544 9.54699 9.55296 11.538 9.55296 13.994C9.55296 16.45 11.544 18.441 14 18.441C16.456 18.441 18.447 16.45 18.447 13.994C18.447 11.538 16.456 9.54699 14 9.54699ZM21.107 5.27999C21.991 5.27999 22.707 5.99599 22.707 6.87999C22.707 7.76399 21.991 8.47999 21.107 8.47999C20.223 8.47999 19.507 7.76399 19.507 6.87999C19.507 5.99599 20.223 5.27999 21.107 5.27999Z"/>
             </svg>
           </a>
         </li>
-        <li class="socials-list__item">
-          <a class="socials-list__item-link" href="https://www.facebook.com/Kennyfmx" target="_blank" title="You can be my new friend!">facebook
-            <svg class="socials-list__item-link__icon" baseProfile="tiny" viewBox="0 0 24 24" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
-              <defs>
-                <linearGradient id="facebook-gradient" gradientTransform="rotate(45)" gradientUnits="userSpaceOnUse">
-                  <stop class="facebook-icon-stop icon-stop" offset="40%" stop-color="white" />
-                  <stop class="facebook-icon-stop icon-stop" offset="100%" stop-color="white" />
-                </linearGradient>
-                <mask id="facebook-icon-mask" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
-                  <path d="M13 10h3v3h-3v7h-3v-7H7v-3h3V8.745c0-1.189.374-2.691 1.118-3.512C11.862 4.41 12.791 4 13.904 4H16v3h-2.1c-.498 0-.9.402-.9.899V10z"></path>
-                </mask>
-              </defs>
-              <g mask="url(#facebook-icon-mask)">
-                <rect x="0" y="0" width="24" height="24" fill="url(#facebook-gradient)"></rect>
-              </g>
-            </svg>
-          </a>
-        </li>
-        <li class="socials-list__item">
-          <a class="socials-list__item-link" href="https://www.instagram.com/kennyfmx/" target="_blank" title="Do you want to stay in touch?">insta
-            <svg class="socials-list__item-link__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56.7 56.7" xml:space="preserve">
-              <defs>
-                <linearGradient id="instagram-gradient" gradientTransform="rotate(45)" gradientUnits="userSpaceOnUse">
-                  <stop class="instagram-icon-stop icon-stop" offset="40%" stop-color="white" />
-                  <stop class="instagram-icon-stop icon-stop" offset="100%" stop-color="white" />
-                </linearGradient>
-                <mask id="instagram-icon-mask" maskUnits="userSpaceOnUse" x="0" y="0" width="56.7" height="56.7">
-                  <path d="M28.2 16.7c-7 0-12.8 5.7-12.8 12.8s5.7 12.8 12.8 12.8S41 36.5 41 29.5s-5.8-12.8-12.8-12.8zm0 21c-4.5 0-8.2-3.7-8.2-8.2s3.7-8.2 8.2-8.2 8.2 3.7 8.2 8.2-3.7 8.2-8.2 8.2z"></path>
-                  <circle cx="41.5" cy="16.4" r="2.9"></circle>
-                  <path d="M49 8.9c-2.6-2.7-6.3-4.1-10.5-4.1H17.9c-8.7 0-14.5 5.8-14.5 14.5v20.5c0 4.3 1.4 8 4.2 10.7 2.7 2.6 6.3 3.9 10.4 3.9h20.4c4.3 0 7.9-1.4 10.5-3.9 2.7-2.6 4.1-6.3 4.1-10.6V19.3c0-4.2-1.4-7.8-4-10.4zm-.4 31c0 3.1-1.1 5.6-2.9 7.3s-4.3 2.6-7.3 2.6H18c-3 0-5.5-.9-7.3-2.6C8.9 45.4 8 42.9 8 39.8V19.3c0-3 .9-5.5 2.7-7.3 1.7-1.7 4.3-2.6 7.3-2.6h20.6c3 0 5.5.9 7.3 2.7 1.7 1.8 2.7 4.3 2.7 7.2v20.6z"></path>
-                </mask>
-              </defs>
-              <g mask="url(#instagram-icon-mask)">
-                <rect x="0" y="0" width="56.7" height="56.7" fill="url(#instagram-gradient)"></rect>
-              </g>
-            </svg>
+        <li class="social-list-item">
+          <a href="#">
+            <svg class="social-icon theme" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M34.1451 0H26.0556V32.6956C26.0556 36.5913 22.9444 39.7913 19.0725 39.7913C15.2007 39.7913 12.0894 36.5913 12.0894 32.6956C12.0894 28.8696 15.1315 25.7391 18.8651 25.6V17.3913C10.6374 17.5304 4 24.2783 4 32.6956C4 41.1827 10.7757 48 19.1417 48C27.5075 48 34.2833 41.1131 34.2833 32.6956V15.9304C37.3255 18.1565 41.059 19.4783 45 19.5479V11.3391C38.9157 11.1304 34.1451 6.12173 34.1451 0Z"/>
+						</svg>
           </a>
         </li>
       </ul>
     </div>
-    <div class="intro-page__content-container">
-      <div class="content-container__text-container">
-        <h1 class="intro-greetings">Приветствуем Вас, мы...</h1>
-        <p class="intro-typing-text" id="intro-typing-text"></p>
-      </div>
-      <div class="content-container__photo-container photo-filter"></div>
-    </div>
-  </div>
+  </footer>
+  <script src="assets/scripts/language-toggle.js"></script>
+  <script src="assets/scripts/gallery.js"></script>
+  <script src="assets/scripts/theme-toggle.js"></script>
+  <script src="assets/scripts/burger.js"></script>
 </body>
 </html>
